@@ -41,8 +41,7 @@
                         <thead>
                             <tr>
                                 <th>Nro</th>
-                                <th>Cód_Prod</th>
-                                <th>Producto</th>
+                                <th>Cód_Prod</th>  
                                 <th>Cant.</th>
                                 <th>Tipo de Fabricación</th>
                                 <th>Subtotal</th>
@@ -52,7 +51,7 @@
                             <tr *ngFor="let producto of pedido.Productos; let i = index">
                                 <td>{{i}}</td>
                                 <td>{{producto.Codigo}}</td>
-                                <td>BORRAR</td>
+                              
                                 <td>{{producto.Cantidad}}</td>
                                 <td>{{producto.Tipofabricacion}}</td>
                                 <td>{{producto.Subtotal}}</td>
