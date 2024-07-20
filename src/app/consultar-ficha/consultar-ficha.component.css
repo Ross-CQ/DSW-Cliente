@@ -1,0 +1,47 @@
+.input-group{
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.ico-menu {
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 40px;
+    text-align: center;
+    padding: 3px;
+}
+
+.btn-buscar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    border: none;
+}
+
+.btn-buscar i{
+    color: #1880AE;
+}
+
+.pedido-info1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: px;
+}
+
+.pedido-cod,.pedido-cliente, .pedido-info2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.pedido-info .input-grl2 {
+    flex: 1;
+}

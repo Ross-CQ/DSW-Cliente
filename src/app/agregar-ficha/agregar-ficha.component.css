@@ -1,0 +1,51 @@
+.input-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group, .ficha-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.codigo-pedido-info{
+    width: 55%;
+    position: relative;
+    display: flex;
+}
+
+.ficha-info{
+    width: 40%;
+}
+
+.ficha-info label,.input-group label{
+    width: 300px;
+}
+
+.titulo-materiales{
+    margin: 20px 0;
+}
+
+.titulo-materiales select{
+    margin-top: 10px;
+    width: 50%;
+}
+
+.tabla-materiales-contenedor {
+    height: auto;
+    overflow-y: auto;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.input-cantidad{
+    width: 60%;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.fixed-width{
+    width: 15%;
+    display: flex-inline;
+    justify-content: space-around;
+}

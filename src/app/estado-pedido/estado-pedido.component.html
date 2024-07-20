@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafcald</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="main-content">
+        <app-sidebar></app-sidebar>
+        <div class="container-grl">
+            <div class="container-bx">
+                <div class="estado-header">
+                    <h2>Estado del Pedido</h2>
+                    <div class="input-group">
+                        <div class="busca-cod">
+                            <p class="ico-menu">≡</p>
+                            <label class="desc">Pedido: </label>
+                            <input id="busca-codigo-pedido" type="text" placeholder="Ingrese el código del pedido" class="input-grl2" (input)="actualizarCodigo($event)">
+                            <button type="submit" class="btn-buscar" (click)="getState()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="filtro-fecha">
+                            <label class="desc">Fecha de Pedido: </label>
+                            <input type="text" placeholder="Fecha de Inicio" class="input-fecha-inicio" disabled>
+                            <button class="btn-filtro">📅</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabla-pedidos-contenedor">
+                    <table class="tabla-grl" id="tabla-estado-pedido">
+                        <thead>
+                            <tr>
+                                <th>Cod_Pedido</th>
+                                <th>Insumos</th>
+                                <th>Producción</th>
+                                <th>Entrega</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                      <tbody>
+                        <tr *ngFor="let pedido of pedidos; let i = index">
+                          <td>{{ pedido.codigo }}</td>
+                          <td>
+                            <select class="estado-select" [value]="estadoAValor(pedido.estadoInsumo)" (change)="actualizarEstadoPedido(pedido, $event, 'insumo')">
+                              <option value="default">Por completar</option>
+                              <option value="inpr">En proceso</option>
+                              <option value="pend">Pendiente</option>
+                              <option value="completo">Completado</option>
+                            </select>
+                          </td>
+                          <td>
+                            <select class="estado-select" [value]="estadoAValor(pedido.estadoProduccion)" (change)="actualizarEstadoPedido(pedido, $event, 'produccion')">
+                              <option value="default">Por completar</option>
+                              <option value="inpr">En proceso</option>
+                              <option value="pend">Pendiente</option>
+                              <option value="completo">Completado</option>
+                            </select>
+                          </td>
+                          <td>
+                            <select class="estado-select" [value]="estadoAValor(pedido.estadoEntrega)" (change)="actualizarEstadoPedido(pedido, $event, 'entrega')">
+                              <option value="default">Por completar</option>
+                              <option value="inpr">En proceso</option>
+                              <option value="pend">Pendiente</option>
+                              <option value="completo">Completado</option>
+                            </select>
+                          </td>
+                          <td>
+                            <button class="btn-refresh" (click)="actualizarPedido(pedido)">🔄</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

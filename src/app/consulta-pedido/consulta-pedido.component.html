@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Rafcald</title>
+</head>
+<body>
+    <div class="main-content">
+        <app-sidebar>
+        </app-sidebar>
+        <div class="container-grl">
+            <div class="container-bx">
+                <div class="consulta-header">
+                    <h2>Información del Pedido</h2>
+                    <div class="input-group">
+                        <p class="ico-menu">≡</p>
+                        <input id="busca-codigo-pedido" type="text" placeholder="Ingrese el código del pedido" class="input-grl2" (input)="actualizarCodigo($event)">
+                        <button type="submit" class="btn-buscar" (click)="getPedido()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="pedido-info">
+                    <div class="pedido-info1">
+                        <div class="pedido-cod">
+                            <label class="desc">Código de Pedido: </label>
+                            <input id="cod-pedido" type="text" class="input-grl2" [value]="pedido.Codigo" disabled>
+                        </div>
+                        <div class="pedido-fecha">
+                            <label class="desc">Fecha de Pedido: </label>
+                            <input id="fecha-pedido" type="text" class="input-grl2" [value]="pedido.Fecha" disabled>
+                        </div>
+                    </div>
+                    <div class="pedido-info2">
+                        <label class="desc">Nombre del Cliente: </label>
+                        <input type="text" class="input-grl2" [value]="pedido.Cliente" disabled>
+                    </div>
+                </div>
+                <div class="tabla-productos-contenedor">
+                    <table class="tabla-grl">
+                        <thead>
+                            <tr>
+                                <th>Nro</th>
+                                <th>Cód_Prod</th>
+                                <th>Producto</th>
+                                <th>Cant.</th>
+                                <th>Tipo de Fabricación</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let producto of pedido.Productos; let i = index">
+                                <td>{{i}}</td>
+                                <td>{{producto.Codigo}}</td>
+                                <td>BORRAR</td>
+                                <td>{{producto.Cantidad}}</td>
+                                <td>{{producto.Tipofabricacion}}</td>
+                                <td>{{producto.Subtotal}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="total-info">
+                    <div class="total-item">
+                        <label for="subtotal">SubTotal</label>
+                        <input type="text" id="subtotal" [value]="subTotal" disabled>
+                    </div>
+                    <div class="total-item">
+                        <label for="igv">IGV</label>
+                        <input type="text" id="igv" [value]="igv" disabled>
+                    </div>
+                    <div class="total-item">
+                        <label for="total">Total</label>
+                        <input type="text" id="total" [value]="total" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+  <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+    </div>
+    <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+      <div class="max-w-md mx-auto">
+        <div>
+          <h1 class="text-2xl font-semibold">Register Form</h1>
+        </div>
+        <div class="divide-y divide-gray-200">
+          <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <input
+                type="text"
+                formControlName="nombre"
+                id="nombre"
+                placeholder="ingrese su nombre"
+              />
+              <input
+                type="text"
+                formControlName="apellido"
+                id="apellido"
+                placeholder="ingrese su apellido"
+              />
+              <input
+                type="number"
+                formControlName="dni"
+                id="dni"
+                placeholder="ingrese su dni"
+              />
+              <input
+                type="text"
+                formControlName="usuario"
+                id="usuario"
+                placeholder="ingrese su usuario"
+              />
+              <input
+                type="password"
+                formControlName="contrasenia"
+                id="password"
+                placeholder="ingrese su contraseña"
+              />
+              <input
+                type="number"
+                formControlName="rol"
+                id="rol"
+                placeholder="ingrese su rol"
+              />
+            </form>
+            <button
+              type="button"
+              class="btn btn-primary btn-block mt-4"
+              (click)="onSubmit()"
+            >
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600 text-center mt-4">
+        Ya tienes una cuenta?
+        <a href="/login" class="text-blue-500">Login</a>
+      </p>
+    </div>
+  </div>
+</div>

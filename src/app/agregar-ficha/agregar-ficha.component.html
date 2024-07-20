@@ -1,0 +1,66 @@
+<div class="main-content">
+    <app-sidebar>
+    </app-sidebar>
+    <div class="container-grl">
+        <div class="container-bx">
+            <h2>Ficha de Especificaciones</h2>
+            <div class="input-group">
+                <div class="codigo-pedido-info">
+                    <label class="desc">Número de Pedido:</label>
+                    <input type="text" placeholder="Ingrese el código del pedido" class="input-grl2">
+                </div>
+                <div class="ficha-info">
+                    <label class="desc">Fecha del Pedido:</label>
+                    <input type="text" class="input-grl2">
+                </div>
+            </div>
+            <div class="titulo-materiales">
+                <div class="desc">
+                    <label for="materiales">Materiales</label>
+                </div>
+                <select type="text" placeholder="Seleccione el material" class="input-grl2"></select>
+            </div>
+            <div class="tabla-materiales-contenedor">
+                <table class="tabla-grl">
+                    <thead>
+                        <tr>
+                            <th>Cód_Material</th>
+                            <th>Material</th>
+                            <th>Descripción del Material</th>
+                            <th class="fixed-width">Cant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Lámpara LED</td>
+                            <td>5</td>
+                            <td>
+                                <input type="number" placeholder="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Bombilla Incandescente</td>
+                            <td>10</td>
+                            <td>
+                                <input type="number" placeholder="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Foco Halógeno</td>
+                            <td>7</td>
+                            <td>
+                                <input type="number" placeholder="0" class="input-cantidad">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="acciones">
+                <button class="btn-cm">✔️ Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

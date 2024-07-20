@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-content">
+        <app-sidebar>
+        </app-sidebar>
+        <div class="container-grl">
+            <div class="container-bx">
+                <h2>Actualizar Inventario</h2>
+                <div class="input-group">
+                    <p class="ico-menu">≡</p>
+                    <label class="desc">Material:</label>
+                    <input id="busca-material" type="text" placeholder="Ingrese el nombre del material" class="input-grl2" (input)="actualizarMaterial($event)">
+                    <button type="submit" class="btn-buscar" (click)="getInventarioByMaterial()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+                <div class="codigo-pedido-info">
+                    <div class="subt">
+                        <label>Descripción:</label>
+                    </div>
+                    <textarea type="text" [value]="inventario.descripcion " (input)="actualizarDescripcion($event)"></textarea>
+                </div>
+                <div class="input-group2">
+                    <div class="medidas">
+                        <div class="subt">
+                            <label for="medidas-title">Medidas</label>
+                        </div>
+                        <div class="cont-med">
+                            <div class="set">
+                                <label class="desc">Alto:</label>
+                                <input type="text" class="input-grl2" [value]="medidas[0]" (input)="actualizarAlto($event)">
+                            </div>
+                            <div class="set">
+                                <label class="desc">Ancho:</label>
+                                <input type="text" class="input-grl2" [value]="medidas[1]" (input)="actualizarAncho($event)">
+                            </div>
+                            <div class="set">
+                                <label class="desc">Largo:</label>
+                                <input type="text" class="input-grl2" [value]="medidas[2]" (input)="actualizarLargo($event)">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="ss-2">
+                        <div class="set">
+                            <label class="desc">Cantidad en stock:</label>
+                            <input type="text" class="input-grl2" [value]="inventario.cantidadstock" (input)="actualizarCantidad($event)">
+                        </div>
+                        <div class="set">
+                            <label class="desc">Costo:</label>
+                            <input type="text" class="input-grl2" [value]="inventario.cantidadtotal" (input)="actualizarCosto($event)">
+                        </div>
+                    </div>
+               </div>
+               <div class="acciones">
+                    <button class="btn-cm" (click)="updateInventario()">🔄️ Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

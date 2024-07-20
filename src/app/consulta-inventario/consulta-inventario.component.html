@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-content">
+        <app-sidebar></app-sidebar>
+        <div class="container-grl">
+            <div class="container-bx">
+                <div class="consulta-header">
+                    <h2>Inventario</h2>
+                    <div class="input-group">
+                        <p class="ico-menu">≡</p>
+                        <input id="busca-material" type="text" placeholder="Ingrese el nombre del material" class="input-grl2" (input)="actualizarMaterial($event)">
+                        <button type="submit" class="btn-buscar" (click)="getInventarioByMaterial()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="tabla-materiales-contenedor">
+                    <table class="tabla-grl">
+                        <thead>
+                            <tr>
+                                <th>Nro</th>
+                                <th>Cód_Material</th>
+                                <th>Material</th>
+                                <th>Descripción</th>
+                                <th>Stock</th>
+                                <th>Medidas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let material of inventario;let i = index">
+                                <td>{{i + 1}}</td>
+                                <td>{{material.codigo}}</td>
+                                <td>{{material.nombre}}</td>
+                                <td>{{material.descripcion}}</td>
+                                <td>{{material.cantidadstock}}</td>
+                                <td>{{material.medidas}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

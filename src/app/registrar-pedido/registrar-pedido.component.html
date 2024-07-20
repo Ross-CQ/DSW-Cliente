@@ -1,0 +1,64 @@
+<div class="main-content">
+    <app-sidebar>
+    </app-sidebar>
+    <div class="registrar-y-total-container" class="container-grl">
+        <div class="registrar-pedido-container" class="container-bx">
+            <h2>Registrar Pedido</h2>
+            <div class="cliente-info">
+                <button class="btn-cliente">Cliente</button>
+                <div class="cliente-datos-container">
+                    <div class="cliente-datos">
+                        <input type="text" placeholder="Nombre" class="input-grl" (input)="actualizarNombre($event)">
+                        <input type="text" placeholder="Apellidos" class="input-grl" (input)="actualizarApellido($event)">
+                    </div>
+                </div>
+            </div>
+            <div class="subt">
+                <label for="input-producto">Productos</label>
+            </div>
+            <div class="productos-info">
+              <input class="input-grl2"  type="text" placeholder="Ingrese el código o nombre del producto" id="input-producto" (ngModelChange)="actualizarCodigo($event)">
+              <label for="input-cantidad" class="desc">Cantidad:</label>
+              <input type="number" placeholder="Cantidad" class="input-grl2" id="input-cantidad" (input)="actualizarCantidad($event)">
+              <button class="btn-agregar" (click)="addPedido()">Agregar</button>
+            </div>
+            <div class="tabla-productos-contenedor">
+                <table class="tabla-grl">
+                    <thead>
+                        <tr>
+                            <th>Nro</th>
+                            <th>Código</th>
+                            <th>Producto</th>
+                            <th>Cant.</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let item of tabla; let i = index">
+                      <td>{{i + 1}}</td>
+                      <td>{{item.producto.codigo}}</td>
+                      <td>Generico</td>
+                      <td>{{item.cantidad}}</td>
+                      <td>{{item.producto.precio}}</td>
+                      <td>{{item.cantidad * item.producto.precio}}</td>
+                      <td><button class="btn-delete" (click)="deletePedido(i)">🗑️</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div class="total-venta">
+                <label for="total-venta">Total Venta</label>
+                <input type="text" id="total-venta" [value]="totalVenta" disabled>
+            </div>
+            <div class="acciones">
+                <button class="btn-registrar" (click)="savePedido()">Registrar pedido</button>
+                <button class="btn-vaciar" (click)="vaciarListado()">Vaciar listado</button>
+            </div>
+        </div>
+    </div>
+
+</div>

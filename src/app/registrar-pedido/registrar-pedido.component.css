@@ -1,0 +1,123 @@
+.cliente-info {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    height: 70px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-cliente {
+    background-color: #1880AE;
+    height: 100%;
+    width: 30%;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cliente-datos-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-left: 20px;
+    border: 1px solid #000000;
+    justify-content: left;
+    align-items: center;
+}
+
+.cliente-datos {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.productos-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+#input-producto {
+    margin-right: 10%; 
+}
+
+#input-cantidad {
+    margin-right: 20px;
+    width: 100px
+}
+
+.btn-agregar {
+    height: 100%;
+    width: 15%;
+    background-color: #1880AE;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#productos {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/*
+.tabla-productos-contenedor {
+    height: 390px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}*/
+
+.total-venta {
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: absolute;
+}
+
+#total-venta {
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.acciones {
+    padding-right: 30px;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+}
+
+.btn-registrar,
+.btn-vaciar {
+    font-weight: 600;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin-left: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-vaciar {
+    background-color: #dc3545;
+}

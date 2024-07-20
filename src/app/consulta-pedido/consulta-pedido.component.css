@@ -1,0 +1,83 @@
+
+.consulta-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+}
+
+#busca-codigo-pedido {
+    display: block;
+}
+
+.ico-menu {
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+    padding: 3px;
+}
+
+.btn-buscar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    border: none;
+}
+
+.btn-buscar i{
+    color: #1880AE;
+}
+
+.pedido-info1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: px;
+}
+
+.pedido-cod,.pedido-fecha, .pedido-info2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.pedido-info .input-grl2 {
+    flex: 1;
+}
+
+.tabla-productos-contenedor {
+    overflow-x: auto;
+}
+
+.total-info {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.total-item {
+    margin-left: 20px;
+}
+
+.total-item label {
+    display: block;
+    font-weight: bold;
+}
+
+.total-item input {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: right;
+}

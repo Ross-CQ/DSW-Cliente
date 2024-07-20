@@ -1,0 +1,84 @@
+.input-group {
+    position: relative;
+    display: flex;
+}
+
+.ico-menu {
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+    padding: 3px;
+}
+
+.btn-buscar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    border: none;
+}
+
+.btn-buscar i{
+    color: #1880AE;
+}
+
+.codigo-pedido-info{
+    margin: 15px auto;
+}
+
+textarea{
+    border: 1px solid #ccc;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+    height: 100px;
+    width: 100%;
+}
+
+.input-group2{
+    display: flex;
+}
+
+.medidas{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.cont-med{
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px 15px 15px;
+}
+
+.set{
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+.cont-med .input-grl2 {
+    width: 200px;
+}
+
+.cont-med .desc {
+    width: 20px;
+}
+
+.ss-2{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 30px;
+    justify-content: space-around;
+    padding-bottom: 55px;
+}
+
+.ss-2 .desc {
+    width: 300px;
+}

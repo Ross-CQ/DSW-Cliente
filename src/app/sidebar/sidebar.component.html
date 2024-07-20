@@ -1,0 +1,68 @@
+<div class="sidebar">
+  <div class="logo">
+    <img class="img-logo" src="../.././assets/images/logo.png" />
+    <h1>RAFCALD</h1>
+    <div class="linea-grafica"></div>
+  </div>
+  <nav>
+    <aside>
+    <ul>
+     <li id="principal">
+        <a>
+         <i class="fas fa-home"></i>
+         <span> Principal</span>
+        </a>
+      </li>
+     </ul>
+
+     <ul>
+      <li id="pedido" class="accordion-item">
+        <input type="radio" id="accordion-pedido" name="accordion">
+        <label for="accordion-pedido">
+          <i class="fas fa-box"></i>
+         <span>Pedido</span>
+         <i class="fa fa-angle-right"></i>
+        </label>
+
+       <ul class="accordion-content">
+        <li (click)="goToScreen('registrar-pedido')"><i class="fas fa-clipboard-list"></i> Registro</li>
+        <li (click)="goToScreen('consulta-pedido')"><i class="fas fa-search"></i> Consulta</li>
+        <li (click)="goToScreen('estado-pedido')"><i class="fas fa-info-circle"></i> Estado</li>
+       </ul>
+      </li>
+    </ul>
+
+    <ul>
+      <li id="inventario" class="accordion-item">
+        <input type="radio" id="accordion-inventario" name="accordion">
+        <label for="accordion-inventario">
+          <i class="fas fa-warehouse"></i>
+          <span>Inventario</span>
+          <i class="fa fa-angle-right"></i>
+        </label>
+        <ul class="accordion-content">
+          <li (click)="goToScreen('consulta-inventario')"><i class="fas fa-search"></i> Consulta</li>
+          <li (click)="goToScreen('actualizar-inventario')"><i class="fas fa-sync"></i> Actualizar</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li id="producción" class="accordion-item">
+        <input type="radio" id="accordion-producción" name="accordion">
+        <label for="accordion-producción">
+          <i class="fas fa-industry"></i>
+          <span>Producción</span>
+          <i class="fa fa-angle-right"></i>
+        </label>
+        <ul class="accordion-content">
+          <li (click)="goToScreen('agregar-ficha')"><i class="fas fa-plus-circle"></i> Agregar</li>
+          <li (click)="goToScreen('consultar-ficha')"><i class="fas fa-search"></i> Consultar</li>
+        </ul>
+      </li>
+    </ul>
+
+   </aside>
+
+  </nav>
+
+</div>

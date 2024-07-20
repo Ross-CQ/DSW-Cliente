@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    height: 100vh;
+}
+
+h2 {
+    font-size: 200%;
+    font-weight: 500;
+    justify-content: baseline;
+    margin: 5px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.container-grl {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+    flex-grow: 1;
+}
+
+.container-bx {
+    align-items: center;
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    height: 100%;
+    flex-grow: 1;
+}
+.subt {
+    font-size: 150%;
+    font-weight: 500;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.input-grl {
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 50%;
+    width: 100%;
+}
+
+.input-grl2{
+    border: 1px solid #ccc;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+.desc {
+    font-weight: 400;
+    font-size: 120%;
+    margin-right: 20px;
+}
+
+/*--- Tabla ---*/
+.tabla-grl {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabla-grl th,
+.tabla-grl td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: left;
+}
+
+.tabla-grl th {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+}
+
+.tabla-grl th:nth-child(1),
+.tabla-grl td:nth-child(1) {
+    width: 50px;
+}
+
+.tabla-grl th:nth-child(7),
+.tabla-grl td:nth-child(7) {
+    width: 80px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.acciones{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-cm {
+    font-weight: 600;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin-left: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,123 @@
+.sidebar {
+  width: 300px;
+  background-color: #132232;
+  color: #ecf0f1;
+  padding: 20px;
+  height: 100%; 
+  overflow-y: auto; 
+}
+
+.logo {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  flex-direction: column;
+}
+
+.img-logo {
+  width: 50%;
+  height: 50%;
+  border-radius:100px;
+  padding: 2%;
+  display: block;
+  margin: 0 auto;
+}
+
+.linea-grafica {
+  width: 70%; 
+  height: 4px; 
+  background-color: #ecf0f1; 
+  margin: 10px auto 0; 
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  padding-left:40px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+nav ul.sidebar-menu {
+  padding-left: 20px;
+} 
+
+nav ul li {
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav ul li a span {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+
+nav ul li a:hover {
+  color: #9abee4;
+}
+
+nav ul li a i {
+  margin-right: 10px;
+}
+
+nav ul li ul {
+  list-style-type: none;
+  padding-left: 40px;
+  margin: 0px;
+}
+
+nav ul li ul li {
+  margin: 10px 0;
+}
+
+/*radio button */
+.accordion-item input[type="radio"]{
+  display: none;
+}
+
+/* Estilo para los elementos del acordeón */
+.accordion-item label{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  cursor: pointer;
+  padding: 10px 0px;
+  
+}
+
+.accordion-content {
+  display: none;
+  padding-left: 20px;
+}
+
+/* Mostrar el contenido cuando el checkbox está marcado */
+.accordion-item input[type="radio"]:checked + label + .accordion-content {
+  display: block;
+}
+
+/* Girar la flecha cuando el contenido está visible */
+.accordion-item input[type="radio"]:checked + label i.fa-angle-right {
+  transform: rotate(90deg);
+}
+
+/* Cambiar el color al pasar el cursor */
+.accordion-item label:hover {
+  color: #9abee4;
+}
+
+nav ul li a span:hover {
+  color: #9abee4;
+}

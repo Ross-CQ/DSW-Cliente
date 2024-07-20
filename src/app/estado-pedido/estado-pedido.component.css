@@ -1,0 +1,56 @@
+  .estado-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.busca-cod{
+  width: 50%;
+  position: relative;
+  display: flex;
+}
+
+  .ico-menu {
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 40px;
+    text-align: center;
+    padding: 3px;
+  }
+
+  .btn-buscar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    border: none;
+  }
+  .btn-buscar i{
+    color: #1880AE;
+  }
+     
+  .tabla-pedidos-contenedor {
+    overflow-x: auto; 
+    margin-top: 20px;
+  }
+  
+  #tabla-estado-pedido td {
+    text-align: center;
+  }  
+  
+  .tabla-grl select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+
+
