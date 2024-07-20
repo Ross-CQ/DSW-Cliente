@@ -36,15 +36,6 @@ export class RegistrarPedidoComponent {
     });
   }
 
-  getProductsByCode(codigo:string) {
-    this.registrarPedidoService.getProductoByCodigo(codigo).subscribe({
-      next: (response) => {
-        this.products = response as Product[];
-        console.log(this.products);
-      }
-    });
-  }
-
   actualizarCantidad(event: Event) {
     const valor = (event.target as HTMLInputElement).value;
     this.cantidad = valor ? parseInt(valor, 10) : 0;
@@ -52,10 +43,7 @@ export class RegistrarPedidoComponent {
 
   actualizarCodigo(event: Event) {
     this.codigo = (event.target as HTMLInputElement).value;
-    this.getProductsByCode (this.codigo)
   }
-
-
 
   actualizarNombre(event: Event) {
     this.nombreCliente = (event.target as HTMLInputElement).value;

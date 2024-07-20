@@ -17,7 +17,7 @@
                 <label for="input-producto">Productos</label>
             </div>
             <div class="productos-info">
-              <input class="input-grl2"  type="text" placeholder="Ingrese el código o nombre del producto" id="input-producto" (ngModelChange)="actualizarCodigo($event)">
+              <input class="input-grl2" type="text" placeholder="Ingrese el código o nombre del producto" id="input-producto" (input)="actualizarCodigo($event)">
               <label for="input-cantidad" class="desc">Cantidad:</label>
               <input type="number" placeholder="Cantidad" class="input-grl2" id="input-cantidad" (input)="actualizarCantidad($event)">
               <button class="btn-agregar" (click)="addPedido()">Agregar</button>
